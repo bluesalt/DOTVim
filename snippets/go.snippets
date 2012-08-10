@@ -1,0 +1,18 @@
+snippet pa
+	package ${1}
+
+snippet testf
+	package ${1}
+
+	import(
+		"testing"
+	)
+	
+	func Test${2} (t *testing.T) {
+		${3}
+	}
+
+snippet testc
+	func Test${1} (t *testing.T) {
+		${2}
+	}
