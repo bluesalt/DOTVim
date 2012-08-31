@@ -21,8 +21,6 @@ syntax on
 filetype on
 filetype plugin on
 set ofu=syntaxcomplete#Complete
-set autoindent
-set smartindent
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class 
 
 let Tlist_Show_One_File=1
@@ -82,3 +80,7 @@ inoremap {<CR>  {<CR>}<Esc>O
 highlight Pmenu ctermbg=238 gui=bold
 "TODO
 "au FileType * exe('setl dict+='.$VIMRUNTIME.'/syntax/'.&filetype.'.vim')
+
+"--config of html file indent
+filetype indent on
+let g:html_indent_inctags="html,body,head,tbody"
