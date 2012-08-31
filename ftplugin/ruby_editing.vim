@@ -6,3 +6,4 @@ let b:ruby_editing_ftplugin = 1
 
 map <buffer> <S-e> :w<CR>:rubyf %
 "map <buffer> gd /def <C-R><C-W><CR> 
+match ExtraWhitespace /\s\+$/

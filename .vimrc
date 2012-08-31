@@ -84,3 +84,7 @@ highlight Pmenu ctermbg=238 gui=bold
 "--config of html file indent
 filetype indent on
 let g:html_indent_inctags="html,body,head,tbody"
+
+"--config for hight extra whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
