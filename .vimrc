@@ -92,3 +92,4 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 set ruler
 
 highlight Visual cterm=NONE ctermbg=White ctermfg=Black
+au! BufNewFile,BufRead *.applescript   setf applescript
