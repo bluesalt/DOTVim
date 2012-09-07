@@ -5,12 +5,13 @@ snippet im
 	import (
 		"${1}"
 	)
-
+	${2}
 snippet main
 	func main() {
 		${1}
 	}
-
+snippet thook
+	func Test(t *testing.T) { TestingT(t)}
 snippet tef
 	package ${1}
 
@@ -20,11 +21,8 @@ snippet tef
 	)
 	type ${2:}Suite struct {
 	}
-
 	var _ = Suite(&$2Suite{})
-
 	${3}
-
 snippet tf
 	func (s *${1:`TestSuiteName()`}Suite) Test${2}(c *C) {
 		${3}
