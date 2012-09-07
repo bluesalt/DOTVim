@@ -77,7 +77,9 @@ let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) 
 
 inoremap {<CR>  {<CR>}<Esc>O
 
-colo BusyBee
+"colo BusyBee
+hi Pmenu 		   guifg=#ffffff guibg=#202020 ctermfg=255 ctermbg=238
+hi PmenuSel 	   guifg=#000000 guibg=#b1d631 ctermfg=0 ctermbg=148
 "highlight Pmenu ctermbg=238 gui=bold
 "TODO
 "au FileType * exe('setl dict+='.$VIMRUNTIME.'/syntax/'.&filetype.'.vim')
