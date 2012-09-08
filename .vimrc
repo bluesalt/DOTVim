@@ -96,3 +96,4 @@ set ruler
 
 highlight Visual cterm=NONE ctermbg=White ctermfg=Black
 au! BufNewFile,BufRead *.applescript   setf applescript
+call pathogen#infect()
