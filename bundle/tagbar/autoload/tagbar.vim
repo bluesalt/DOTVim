@@ -375,19 +375,25 @@ function! s:InitTypes() abort
 
     " Golang {{3
     let type_go = s:TypeInfo.New()
-    let type_go.ctagstype = 'go'
+    let type_go.ctagstype = 'Go'
     let type_go.kinds = [
+        \ {'short' : 'p', 'long' : 'package',  'fold' : 0, 'stl' : 0},
+        \ {'short' : 'c', 'long' : 'const',  'fold' : 0, 'stl' : 0},
         \ {'short' : 'v', 'long' : 'var',  'fold' : 0, 'stl' : 0},
-        \ {'short' : 't', 'long' : 'type', 'fold' : 0, 'stl' : 0},
+        \ {'short' : 't', 'long' : 'type', 'fold' : 1, 'stl' : 1},
         \ {'short' : 'f', 'long' : 'func', 'fold' : 0, 'stl' : 0}
         \]
     let type_go.sro = '.'
     let type_go.kind2scope = {
+        \'p' : 'package',
+        \'c' : 'const',
         \'v' : 'var',
         \'t' : 'type',
         \'f' : 'func'
         \}
     let type_go.scope2kind = {
+        \'package' : 'p',
+        \'const' : 'c',
         \'var' : 'v',
         \'type' : 't',
         \'func' : 'f'
@@ -1002,6 +1008,7 @@ function! s:CheckForExCtags(silent) abort
 
     if !exists('g:tagbar_ctags_bin')
         let ctagsbins  = []
+        let ctagsbins += ['ctags-go'] " ctags-exuberant with go support
         let ctagsbins += ['ctags-exuberant'] " Debian
         let ctagsbins += ['exuberant-ctags']
         let ctagsbins += ['exctags'] " FreeBSD, NetBSD
