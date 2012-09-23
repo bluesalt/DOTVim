@@ -12,14 +12,21 @@ snippet main
 	}
 snippet thook
 	func Test(t *testing.T) { TestingT(t)}
+snippet tsu
+	func (s *${1:`TestSuiteName()`}Suite) SetUpTest(c *C) {
+		${2}
+	}
+snippet ttd
+	func (s *${1:`TestSuiteName()`}Suite) TearDownTest(c *C) {
+		${2}
+	}
 snippet tef
 	package ${1}
 
 	import(
 		. "launchpad.net/gocheck"
-		"testing"
 	)
-	type ${2:}Suite struct {
+	type ${2:`TestSuiteName()`}Suite struct {
 	}
 	var _ = Suite(&$2Suite{})
 	${3}
