@@ -1,6 +1,6 @@
 fun! TestSuiteName()
-	if exists("g:suitename")
-		return g:suitename
+	if exists("g:sn")
+		return g:sn
 	endif
 	return ""
 endfun

@@ -16,8 +16,16 @@ snippet tsu
 	func (s *${1:`TestSuiteName()`}Suite) SetUpTest(c *C) {
 		${2}
 	}
-snippet ttd
+snippet tss
+	func (s *${1:`TestSuiteName()`}Suite) SetUpSuite(c *C) {
+		${2}
+	}
+snippet tdt
 	func (s *${1:`TestSuiteName()`}Suite) TearDownTest(c *C) {
+		${2}
+	}
+snippet tds
+	func (s *${1:`TestSuiteName()`}Suite) TearDownSuite(c *C) {
 		${2}
 	}
 snippet tef
