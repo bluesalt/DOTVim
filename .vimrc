@@ -99,3 +99,4 @@ au! BufNewFile,BufRead *.applescript   setf applescript
 call pathogen#infect()
 
 set backspace=2
+set tabstop=2

@@ -42,4 +42,7 @@ snippet tf
 	func (s *${1:`TestSuiteName()`}Suite) Test${2}(c *C) {
 		${3}
 	}
-	
+snippet bf
+	func Benchmark${1}(b *testing.B) {
+		${2}
+	}
