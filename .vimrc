@@ -101,3 +101,7 @@ call pathogen#infect()
 
 set backspace=2
 set tabstop=2
+
+syntax enable
+set background=dark
+colorscheme solarized
