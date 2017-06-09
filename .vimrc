@@ -13,8 +13,9 @@ let g:winManagerWindowLayout='FileExplorer|TagList'
 
 
 
-map <F2> <Esc>:tabp<Cr>
-map <F3> <Esc>:tabn<Cr>
+map <C-H> <Esc>:tabp<Cr>
+map <C-L> <Esc>:tabn<Cr>
+map <C-N> <Esc>:tabnew<Cr>
 map <F8> o<Esc>
 map <F9> O<Esc>
 
