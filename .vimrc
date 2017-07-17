@@ -104,3 +104,6 @@ set backspace=2
 set tabstop=2
 
 colorscheme bluegreen
+
+set wildmode=longest,list,full
+set wildmenu
